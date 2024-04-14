@@ -5,7 +5,7 @@ function mostrarSeries(series) {
     headerRow.innerHTML = '<th>ID</th><th>Nombre</th><th>Canal</th><th>Temporadas</th>';
     series.forEach(function (serie) {
         var row = table.insertRow();
-        row.classList.add('data-row'); // Añadir clase a la fila de datos
+        row.classList.add('data-row');
         row.innerHTML = "<td>".concat(serie.id, "</td><td class='name'>").concat(serie.name, "</td><td>").concat(serie.channel, "</td><td>").concat(serie.seasons, "</td>");
     });
     var totalSeasons = series.reduce(function (total, serie) { return total + serie.seasons; }, 0);
